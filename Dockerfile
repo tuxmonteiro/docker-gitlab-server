@@ -6,7 +6,8 @@ WORKDIR /root
 
 USER root
 
-ENV PKG "mysql56u-server redis"
+# gitlab requires redis >= 2.8 & mysql >= 5.5
+ENV PKG "mysql56u-server redis30u"
 
 RUN echo "Starting..."; \
   yum check-update -y; \
